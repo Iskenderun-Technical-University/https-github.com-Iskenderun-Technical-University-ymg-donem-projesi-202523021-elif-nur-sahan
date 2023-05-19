@@ -10,23 +10,11 @@ using System.Windows.Forms;
 
 namespace Kütüphane_Otomasyonu
 {
-    public partial class Anasayfa : Form
+    public partial class ÜyeEkleme : Form
     {
-        public Anasayfa()
+        public ÜyeEkleme()
         {
             InitializeComponent();
-        }
-
-      
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
