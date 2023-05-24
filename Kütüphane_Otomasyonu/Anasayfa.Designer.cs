@@ -29,6 +29,7 @@ namespace Kütüphane_Otomasyonu
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnUyeEkleme = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnUyeListele = new System.Windows.Forms.Button();
@@ -43,10 +44,14 @@ namespace Kütüphane_Otomasyonu
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnGrafik = new System.Windows.Forms.Button();
             this.btnSıralama = new System.Windows.Forms.Button();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnUyeEkleme
@@ -206,6 +211,8 @@ namespace Kütüphane_Otomasyonu
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -226,6 +233,8 @@ namespace Kütüphane_Otomasyonu
         private System.Windows.Forms.Button btnEmanetVer;
         private System.Windows.Forms.Button btnGrafik;
         private System.Windows.Forms.Button btnSıralama;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.BindingSource bindingSource2;
     }
 }
 

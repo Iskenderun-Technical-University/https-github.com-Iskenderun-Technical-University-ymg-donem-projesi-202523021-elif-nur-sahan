@@ -90,6 +90,8 @@ namespace Kütüphane_Otomasyonu
             this.textOkuduguKitapSayısı.Name = "textOkuduguKitapSayısı";
             this.textOkuduguKitapSayısı.Size = new System.Drawing.Size(121, 22);
             this.textOkuduguKitapSayısı.TabIndex = 7;
+            this.textOkuduguKitapSayısı.Text = "0";
+            this.textOkuduguKitapSayısı.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -188,6 +190,7 @@ namespace Kütüphane_Otomasyonu
             this.buttonÜyeEKle.TabIndex = 19;
             this.buttonÜyeEKle.Text = "Ekle";
             this.buttonÜyeEKle.UseVisualStyleBackColor = true;
+            this.buttonÜyeEKle.Click += new System.EventHandler(this.buttonÜyeEKle_Click);
             // 
             // buttonİptal
             // 
