@@ -86,6 +86,7 @@ namespace Kütüphane_Otomasyonu
             this.btnUyeListele.TabIndex = 5;
             this.btnUyeListele.Text = "Üye Listeleme İşlemleri";
             this.btnUyeListele.UseVisualStyleBackColor = true;
+            this.btnUyeListele.Click += new System.EventHandler(this.btnUyeListele_Click);
             // 
             // groupBox2
             // 

@@ -177,6 +177,9 @@ namespace Kütüphane_Otomasyonu
             // comboCinsiyet
             // 
             this.comboCinsiyet.FormattingEnabled = true;
+            this.comboCinsiyet.Items.AddRange(new object[] {
+            "Kadın",
+            "Erkek"});
             this.comboCinsiyet.Location = new System.Drawing.Point(183, 141);
             this.comboCinsiyet.Name = "comboCinsiyet";
             this.comboCinsiyet.Size = new System.Drawing.Size(121, 24);

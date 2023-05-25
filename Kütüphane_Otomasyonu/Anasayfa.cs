@@ -21,12 +21,19 @@ namespace Kütüphane_Otomasyonu
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            ÜyeEkleme uyeekle = new ÜyeEkleme();
+            uyeekle.ShowDialog();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnUyeListele_Click(object sender, EventArgs e)
+        {
+            ÜyeListeleme uyelist = new ÜyeListeleme();
+            uyelist.ShowDialog();
         }
     }
 }

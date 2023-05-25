@@ -13,11 +13,13 @@ namespace Kütüphane_Otomasyonu
 {
     public partial class ÜyeEkleme : Form
     {
+     
         public ÜyeEkleme()
         {
             InitializeComponent();
         }
-        SqlConnection baglanti= new SqlConnection("Data Source=DESKTOP-VAQ7C88\SQLEXPRESS;Initial Catalog = KütüphaneOtomasyonu; Integrated Security = True");
+         SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-VAQ7C88\\SQLEXPRESS;Initial Catalog = KütüphaneOtomasyonu; Integrated Security = True");
+        
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -36,8 +38,28 @@ namespace Kütüphane_Otomasyonu
         {
             baglanti.Open();
             SqlCommand komut = new SqlCommand("insert  into ÜyeEkleme(Tc,Ad-Soyad,Yas,Cinsiyet,Telefon,Adres,E-mail,Okudugu Kitap Sayısı)values(@Tc,@Ad-Soyad,@Yas,@Cinsiyet,@Telefon,@Adres,@E-mail,@Okudugu Kitap Sayısı)", baglanti);
-            komut.Parameters.AddWithValue("@tc", textTC);
-            komut.Parameters.AddWithValue("@Ad-Soyad", textAdsoyad);
+            komut.Parameters.AddWithValue("@tc", textTC.Text);
+            komut.Parameters.AddWithValue("@Ad-Soyad", textAdsoyad.Text);
+            komut.Parameters.AddWithValue("@Yas", textyas.Text);
+            komut.Parameters.AddWithValue("@Cinsiyet", comboCinsiyet.Text);
+            komut.Parameters.AddWithValue("@Telefon", textTelefon.Text);
+            komut.Parameters.AddWithValue("@Adres", textAdres.Text);
+            komut.Parameters.AddWithValue("@E-mail", textMail.Text);
+            komut.Parameters.AddWithValue("@Okudugu Kitap Sayısı", textOkuduguKitapSayısı.Text);
+            baglanti.Close();
+            MessageBox.Show("Üye kaydı yapıldı.");
+            foreach(Control item in Controls)
+            {
+                if (item is TextBox)
+                {
+                    if( item!= textOkuduguKitapSayısı)
+                    {
+                        item.Text = "";
+                    }
+                    
+                }
+
+            }
 
 
         }

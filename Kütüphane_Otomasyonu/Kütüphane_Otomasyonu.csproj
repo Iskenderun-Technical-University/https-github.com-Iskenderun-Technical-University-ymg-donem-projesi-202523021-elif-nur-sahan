@@ -65,6 +65,12 @@
     <Compile Include="ÜyeEkleme.Designer.cs">
       <DependentUpon>ÜyeEkleme.cs</DependentUpon>
     </Compile>
+    <Compile Include="ÜyeListeleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ÜyeListeleme.Designer.cs">
+      <DependentUpon>ÜyeListeleme.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Anasayfa.resx">
       <DependentUpon>Anasayfa.cs</DependentUpon>
     </EmbeddedResource>
@@ -79,6 +85,9 @@
     </Compile>
     <EmbeddedResource Include="ÜyeEkleme.resx">
       <DependentUpon>ÜyeEkleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ÜyeListeleme.resx">
+      <DependentUpon>ÜyeListeleme.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="KütüphaneOtomasyonuDataSet.xsc">
       <DependentUpon>KütüphaneOtomasyonuDataSet.xsd</DependentUpon>
