@@ -18,6 +18,7 @@ namespace Kütüphane_Otomasyonu
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Anasayfa());
+          
         }
     }
 }

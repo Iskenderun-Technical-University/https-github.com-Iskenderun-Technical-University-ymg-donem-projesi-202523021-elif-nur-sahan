@@ -29,7 +29,7 @@ namespace Kütüphane_Otomasyonu
         /// </summary>
         private void InitializeComponent()
         {
-            this.textTC = new System.Windows.Forms.TextBox();
+            this.txtTc = new System.Windows.Forms.TextBox();
             this.textAdsoyad = new System.Windows.Forms.TextBox();
             this.textyas = new System.Windows.Forms.TextBox();
             this.textAdres = new System.Windows.Forms.TextBox();
@@ -49,12 +49,12 @@ namespace Kütüphane_Otomasyonu
             this.buttonİptal = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textTC
+            // txtTc
             // 
-            this.textTC.Location = new System.Drawing.Point(183, 20);
-            this.textTC.Name = "textTC";
-            this.textTC.Size = new System.Drawing.Size(121, 22);
-            this.textTC.TabIndex = 0;
+            this.txtTc.Location = new System.Drawing.Point(183, 20);
+            this.txtTc.Name = "txtTc";
+            this.txtTc.Size = new System.Drawing.Size(121, 22);
+            this.txtTc.TabIndex = 0;
             // 
             // textAdsoyad
             // 
@@ -98,9 +98,9 @@ namespace Kütüphane_Otomasyonu
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(141, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 17);
+            this.label1.Size = new System.Drawing.Size(24, 17);
             this.label1.TabIndex = 10;
-            this.label1.Text = "T.C";
+            this.label1.Text = "Tc";
             // 
             // label2
             // 
@@ -110,7 +110,6 @@ namespace Kütüphane_Otomasyonu
             this.label2.Size = new System.Drawing.Size(70, 17);
             this.label2.TabIndex = 11;
             this.label2.Text = "Ad-Soyad";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -147,7 +146,6 @@ namespace Kütüphane_Otomasyonu
             this.label6.Size = new System.Drawing.Size(45, 17);
             this.label6.TabIndex = 15;
             this.label6.Text = "Adres";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -228,7 +226,7 @@ namespace Kütüphane_Otomasyonu
             this.Controls.Add(this.textTelefon);
             this.Controls.Add(this.textyas);
             this.Controls.Add(this.textAdsoyad);
-            this.Controls.Add(this.textTC);
+            this.Controls.Add(this.txtTc);
             this.Name = "ÜyeEkleme";
             this.Text = "Üye Ekleme Sayfası";
             this.Load += new System.EventHandler(this.ÜyeEkleme_Load);
@@ -239,7 +237,7 @@ namespace Kütüphane_Otomasyonu
 
         #endregion
 
-        private System.Windows.Forms.TextBox textTC;
+        private System.Windows.Forms.TextBox txtTc;
         private System.Windows.Forms.TextBox textAdsoyad;
         private System.Windows.Forms.TextBox textyas;
         private System.Windows.Forms.TextBox textAdres;

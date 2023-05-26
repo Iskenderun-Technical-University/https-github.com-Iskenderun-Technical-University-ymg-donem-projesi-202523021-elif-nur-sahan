@@ -19,16 +19,7 @@ namespace Kütüphane_Otomasyonu
             InitializeComponent();
         }
          SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-VAQ7C88\\SQLEXPRESS;Initial Catalog = KütüphaneOtomasyonu; Integrated Security = True");
-        
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
+        SqlCommand cmd;
 
         private void ÜyeEkleme_Load(object sender, EventArgs e)
         {
@@ -37,15 +28,19 @@ namespace Kütüphane_Otomasyonu
         private void buttonÜyeEKle_Click(object sender, EventArgs e)
         {
             baglanti.Open();
-            SqlCommand komut = new SqlCommand("insert  into ÜyeEkleme(Tc,Ad-Soyad,Yas,Cinsiyet,Telefon,Adres,E-mail,Okudugu Kitap Sayısı)values(@Tc,@Ad-Soyad,@Yas,@Cinsiyet,@Telefon,@Adres,@E-mail,@Okudugu Kitap Sayısı)", baglanti);
-            komut.Parameters.AddWithValue("@tc", textTC.Text);
-            komut.Parameters.AddWithValue("@Ad-Soyad", textAdsoyad.Text);
-            komut.Parameters.AddWithValue("@Yas", textyas.Text);
-            komut.Parameters.AddWithValue("@Cinsiyet", comboCinsiyet.Text);
-            komut.Parameters.AddWithValue("@Telefon", textTelefon.Text);
-            komut.Parameters.AddWithValue("@Adres", textAdres.Text);
-            komut.Parameters.AddWithValue("@E-mail", textMail.Text);
-            komut.Parameters.AddWithValue("@Okudugu Kitap Sayısı", textOkuduguKitapSayısı.Text);
+            string sorgu= "insert  into ÜyeEkleme(Tc, [Ad Soyad],Yaş,Cinsiyet,Telefon,Adres,[E-mail],[Okuduğu Kitap Sayısı])values(@Tc,@AdSoyad,@Yas,@Cinsiyet,@Telefon,@Adres,@Email,@OkuduğuKitapSayısı)";
+            cmd = new SqlCommand(sorgu, baglanti);
+            cmd.Parameters.AddWithValue("@Tc", txtTc.Text);
+            cmd.Parameters.AddWithValue("@AdSoyad", textAdsoyad.Text);
+            cmd.Parameters.AddWithValue("@Yas", textyas.Text);
+            cmd.Parameters.AddWithValue("@Cinsiyet", comboCinsiyet.Text);
+            cmd.Parameters.AddWithValue("@Telefon", textTelefon.Text);
+            cmd.Parameters.AddWithValue("@Adres", textAdres.Text);
+            cmd.Parameters.AddWithValue("@Email", textMail.Text);
+            cmd.Parameters.AddWithValue("@OkuduğuKitapSayısı", textOkuduguKitapSayısı.Text);
+           
+            cmd.ExecuteNonQuery();
+          
             baglanti.Close();
             MessageBox.Show("Üye kaydı yapıldı.");
             foreach(Control item in Controls)

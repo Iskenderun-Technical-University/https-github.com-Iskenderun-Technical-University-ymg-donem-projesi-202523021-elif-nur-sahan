@@ -47,9 +47,9 @@ namespace Kütüphane_Otomasyonu
             this.textTelefon = new System.Windows.Forms.TextBox();
             this.textyas = new System.Windows.Forms.TextBox();
             this.textAdsoyad = new System.Windows.Forms.TextBox();
-            this.textTC = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtTCarama = new System.Windows.Forms.Label();
+            this.txtTc = new System.Windows.Forms.TextBox();
+            this.textAraTc = new System.Windows.Forms.TextBox();
+            this.txtTcarama = new System.Windows.Forms.Label();
             this.btnsil = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -74,6 +74,7 @@ namespace Kütüphane_Otomasyonu
             this.buttonİptal.TabIndex = 38;
             this.buttonİptal.Text = "İptal";
             this.buttonİptal.UseVisualStyleBackColor = true;
+            this.buttonİptal.Click += new System.EventHandler(this.buttonİptal_Click);
             // 
             // buttonGüncelle
             // 
@@ -83,6 +84,7 @@ namespace Kütüphane_Otomasyonu
             this.buttonGüncelle.TabIndex = 37;
             this.buttonGüncelle.Text = "Güncelle";
             this.buttonGüncelle.UseVisualStyleBackColor = true;
+            this.buttonGüncelle.Click += new System.EventHandler(this.buttonGüncelle_Click);
             // 
             // comboCinsiyet
             // 
@@ -134,7 +136,7 @@ namespace Kütüphane_Otomasyonu
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(117, 199);
+            this.label4.Location = new System.Drawing.Point(111, 202);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 17);
             this.label4.TabIndex = 31;
@@ -163,9 +165,9 @@ namespace Kütüphane_Otomasyonu
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(144, 81);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 17);
+            this.label1.Size = new System.Drawing.Size(24, 17);
             this.label1.TabIndex = 28;
-            this.label1.Text = "T.C";
+            this.label1.Text = "Tc";
             // 
             // textOkuduguKitapSayısı
             // 
@@ -173,7 +175,6 @@ namespace Kütüphane_Otomasyonu
             this.textOkuduguKitapSayısı.Name = "textOkuduguKitapSayısı";
             this.textOkuduguKitapSayısı.Size = new System.Drawing.Size(121, 22);
             this.textOkuduguKitapSayısı.TabIndex = 27;
-            this.textOkuduguKitapSayısı.Text = "0";
             this.textOkuduguKitapSayısı.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textMail
@@ -211,30 +212,30 @@ namespace Kütüphane_Otomasyonu
             this.textAdsoyad.Size = new System.Drawing.Size(121, 22);
             this.textAdsoyad.TabIndex = 22;
             // 
-            // textTC
+            // txtTc
             // 
-            this.textTC.Location = new System.Drawing.Point(186, 78);
-            this.textTC.Name = "textTC";
-            this.textTC.Size = new System.Drawing.Size(121, 22);
-            this.textTC.TabIndex = 21;
-            this.textTC.TextChanged += new System.EventHandler(this.textTC_TextChanged);
+            this.txtTc.Location = new System.Drawing.Point(186, 78);
+            this.txtTc.Name = "txtTc";
+            this.txtTc.Size = new System.Drawing.Size(121, 22);
+            this.txtTc.TabIndex = 21;
+            this.txtTc.TextChanged += new System.EventHandler(this.textTC_TextChanged);
             // 
-            // textBox1
+            // textAraTc
             // 
-            this.textBox1.Location = new System.Drawing.Point(499, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 22);
-            this.textBox1.TabIndex = 39;
+            this.textAraTc.Location = new System.Drawing.Point(499, 47);
+            this.textAraTc.Name = "textAraTc";
+            this.textAraTc.Size = new System.Drawing.Size(121, 22);
+            this.textAraTc.TabIndex = 39;
+            this.textAraTc.TextChanged += new System.EventHandler(this.textAraTc_TextChanged);
             // 
-            // txtTCarama
+            // txtTcarama
             // 
-            this.txtTCarama.AutoSize = true;
-            this.txtTCarama.Location = new System.Drawing.Point(405, 47);
-            this.txtTCarama.Name = "txtTCarama";
-            this.txtTCarama.Size = new System.Drawing.Size(75, 17);
-            this.txtTCarama.TabIndex = 40;
-            this.txtTCarama.Text = "T.C Arama";
-            this.txtTCarama.Click += new System.EventHandler(this.label9_Click);
+            this.txtTcarama.AutoSize = true;
+            this.txtTcarama.Location = new System.Drawing.Point(405, 47);
+            this.txtTcarama.Name = "txtTcarama";
+            this.txtTcarama.Size = new System.Drawing.Size(75, 17);
+            this.txtTcarama.TabIndex = 40;
+            this.txtTcarama.Text = "T.C Arama";
             // 
             // btnsil
             // 
@@ -244,6 +245,7 @@ namespace Kütüphane_Otomasyonu
             this.btnsil.TabIndex = 41;
             this.btnsil.Text = "Sil";
             this.btnsil.UseVisualStyleBackColor = true;
+            this.btnsil.Click += new System.EventHandler(this.btnsil_Click);
             // 
             // ÜyeListeleme
             // 
@@ -252,8 +254,8 @@ namespace Kütüphane_Otomasyonu
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(933, 499);
             this.Controls.Add(this.btnsil);
-            this.Controls.Add(this.txtTCarama);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTcarama);
+            this.Controls.Add(this.textAraTc);
             this.Controls.Add(this.buttonİptal);
             this.Controls.Add(this.buttonGüncelle);
             this.Controls.Add(this.comboCinsiyet);
@@ -271,10 +273,11 @@ namespace Kütüphane_Otomasyonu
             this.Controls.Add(this.textTelefon);
             this.Controls.Add(this.textyas);
             this.Controls.Add(this.textAdsoyad);
-            this.Controls.Add(this.textTC);
+            this.Controls.Add(this.txtTc);
             this.Controls.Add(this.dataGridView1);
             this.Name = "ÜyeListeleme";
             this.Text = "ÜyeListeleme";
+            this.Load += new System.EventHandler(this.ÜyeListeleme_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -301,9 +304,9 @@ namespace Kütüphane_Otomasyonu
         private System.Windows.Forms.TextBox textTelefon;
         private System.Windows.Forms.TextBox textyas;
         private System.Windows.Forms.TextBox textAdsoyad;
-        private System.Windows.Forms.TextBox textTC;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label txtTCarama;
+        private System.Windows.Forms.TextBox txtTc;
+        private System.Windows.Forms.TextBox textAraTc;
+        private System.Windows.Forms.Label txtTcarama;
         private System.Windows.Forms.Button btnsil;
     }
 }

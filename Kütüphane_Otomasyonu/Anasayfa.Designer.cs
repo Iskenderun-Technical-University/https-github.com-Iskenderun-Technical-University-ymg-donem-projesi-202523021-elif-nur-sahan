@@ -152,7 +152,6 @@ namespace Kütüphane_Otomasyonu
             this.btnKitapİşlemleri.TabIndex = 1;
             this.btnKitapİşlemleri.Text = "Emanet Kitap Listeleme İşlemleri";
             this.btnKitapİşlemleri.UseVisualStyleBackColor = true;
-            this.btnKitapİşlemleri.Click += new System.EventHandler(this.button6_Click);
             // 
             // btnEmanetVer
             // 

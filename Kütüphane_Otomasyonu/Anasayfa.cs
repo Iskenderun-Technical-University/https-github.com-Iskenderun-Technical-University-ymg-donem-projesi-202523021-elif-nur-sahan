@@ -25,11 +25,6 @@ namespace Kütüphane_Otomasyonu
             uyeekle.ShowDialog();
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnUyeListele_Click(object sender, EventArgs e)
         {
             ÜyeListeleme uyelist = new ÜyeListeleme();
