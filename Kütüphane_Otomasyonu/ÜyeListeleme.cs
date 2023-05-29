@@ -76,6 +76,27 @@ namespace Kütüphane_Otomasyonu
 
         private void btnsil_Click(object sender, EventArgs e)
         {
+            DialogResult dialog;
+            dialog=MessageBox.Show("Bu kaydı silmek istiyor musunuz?","SİL",MessageBoxButtons.YesNo,MessageBoxIcon.Information);
+            if (dialog == DialogResult.Yes)
+            {
+                baglanti.Open();
+                string var = "delete  from ÜyeEkleme where Tc=@Tc ";
+                cmd = new SqlCommand(var, baglanti);
+                cmd.Parameters.AddWithValue("@Tc", dataGridView1.CurrentRow.Cells["Tc"].Value.ToString());
+                cmd.ExecuteNonQuery();
+                baglanti.Close();
+                MessageBox.Show("Silme işlemi gerçekleşti.");
+                daset.Tables["ÜyeEkleme"].Clear();
+                Üyelisteleme();
+                foreach (Control item in Controls)
+                {
+                    if (item is TextBox)
+                    {
+                        item.Text = "";
+                    }
+                }
+            }
             baglanti.Open();
             string sorgu = "delete  from ÜyeEkleme where Tc=@Tc ";
              cmd= new SqlCommand(sorgu,baglanti);
