@@ -30,5 +30,11 @@ namespace Kütüphane_Otomasyonu
             ÜyeListeleme uyelist = new ÜyeListeleme();
             uyelist.ShowDialog();
         }
+
+        private void btnKitapEkle_Click(object sender, EventArgs e)
+        {
+            KitapEkleme kitapEkle = new KitapEkleme();
+            kitapEkle.ShowDialog();
+        }
     }
 }

@@ -119,6 +119,7 @@ namespace Kütüphane_Otomasyonu
             this.btnKitapEkle.TabIndex = 0;
             this.btnKitapEkle.Text = "Kitap Ekleme İşlemleri";
             this.btnKitapEkle.UseVisualStyleBackColor = true;
+            this.btnKitapEkle.Click += new System.EventHandler(this.btnKitapEkle_Click);
             // 
             // groupBox3
             // 
