@@ -42,6 +42,12 @@ namespace Kütüphane_Otomasyonu
             KitapListeleme kitaplistele = new KitapListeleme();
             kitaplistele.ShowDialog();
         }
+
+        private void btnEmanetVer_Click(object sender, EventArgs e)
+        {
+            EmanetVer emanetkitapver = new EmanetVer();
+            emanetkitapver.ShowDialog();
+        }
     }
 
 }

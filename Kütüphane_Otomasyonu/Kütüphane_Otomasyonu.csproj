@@ -52,6 +52,12 @@
     <Compile Include="Anasayfa.Designer.cs">
       <DependentUpon>Anasayfa.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmanetVer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmanetVer.Designer.cs">
+      <DependentUpon>EmanetVer.cs</DependentUpon>
+    </Compile>
     <Compile Include="KitapEkleme.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,9 @@
     </Compile>
     <EmbeddedResource Include="Anasayfa.resx">
       <DependentUpon>Anasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmanetVer.resx">
+      <DependentUpon>EmanetVer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KitapEkleme.resx">
       <DependentUpon>KitapEkleme.cs</DependentUpon>

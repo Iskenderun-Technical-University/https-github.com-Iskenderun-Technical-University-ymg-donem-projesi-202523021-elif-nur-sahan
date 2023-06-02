@@ -164,6 +164,7 @@ namespace Kütüphane_Otomasyonu
             this.btnEmanetVer.TabIndex = 0;
             this.btnEmanetVer.Text = "Emanet Kitap İşlemleri";
             this.btnEmanetVer.UseVisualStyleBackColor = true;
+            this.btnEmanetVer.Click += new System.EventHandler(this.btnEmanetVer_Click);
             // 
             // groupBox4
             // 
