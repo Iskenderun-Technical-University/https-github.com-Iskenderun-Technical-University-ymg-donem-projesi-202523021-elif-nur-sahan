@@ -109,6 +109,7 @@ namespace Kütüphane_Otomasyonu
             this.btnKitapListele.TabIndex = 1;
             this.btnKitapListele.Text = "Kitap Listeleme İşlemleri";
             this.btnKitapListele.UseVisualStyleBackColor = true;
+            this.btnKitapListele.Click += new System.EventHandler(this.btnKitapListele_Click);
             // 
             // btnKitapEkle
             // 

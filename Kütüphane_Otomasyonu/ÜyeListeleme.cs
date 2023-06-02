@@ -144,6 +144,7 @@ namespace Kütüphane_Otomasyonu
             cmd.Parameters.AddWithValue("@OkuduguKitapSayısı",textOkuduguKitapSayısı.Text);
             cmd.ExecuteNonQuery();
             baglanti.Close();
+            MessageBox.Show("Güncelleme işlemi geröekleşti");
             daset.Tables["ÜyeEkleme"].Clear();
             Üyelisteleme();
             foreach (Control item in Controls)

@@ -36,5 +36,12 @@ namespace Kütüphane_Otomasyonu
             KitapEkleme kitapEkle = new KitapEkleme();
             kitapEkle.ShowDialog();
         }
+
+        private void btnKitapListele_Click(object sender, EventArgs e)
+        {
+            KitapListeleme kitaplistele = new KitapListeleme();
+            kitaplistele.ShowDialog();
+        }
     }
+
 }
